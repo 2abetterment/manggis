@@ -6,8 +6,9 @@
    You can find them in Supabase → Project Settings → API.
 */
 
-const SUPABASE_URL = "https://eyldrucxywovksqasuqy.supabase.co";
-const SUPABASE_ANON_KEY = "sb_publishable_lffx2AKe8mEP0WhQLaQ8Aw_mFueAnDr";
+const SUPABASE_URL = "https://eyldrucxywovksqasuqy.supabase.co";   // ← paste your project URL
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV5bGRydWN4eXdvdmtzcWFzdXF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEwNjQ0MDUsImV4cCI6MjA5NjY0MDQwNX0.mY8satAN0mO_-nO8bud5s1iWVcdYZmOl6XOlhjyg1-Y";                 // ← paste your anon/public key
+
 // ─── Static lookup tables (these never change) ───────────────────────────────
 
 const IUCN = {
@@ -365,7 +366,7 @@ function loadFallback() {
 // ─── Boot ─────────────────────────────────────────────────────────────────────
 
 // If keys are still placeholders, skip the network call
-if (SUPABASE_URL.includes("YOUR_PROJECT") || SUPABASE_ANON_KEY.includes("sb_publishable_lffx2AKe8mEP0WhQLaQ8Aw_mFueAnDr")) {
+if (SUPABASE_URL.includes("YOUR_PROJECT") || SUPABASE_ANON_KEY.includes("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV5bGRydWN4eXdvdmtzcWFzdXF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEwNjQ0MDUsImV4cCI6MjA5NjY0MDQwNX0.mY8satAN0mO_-nO8bud5s1iWVcdYZmOl6XOlhjyg1-Y")) {
   console.info("[Manggis] Supabase keys not set — using static fallback. See data.js to configure.");
   loadFallback();
 } else {

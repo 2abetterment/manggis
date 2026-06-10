@@ -6,9 +6,8 @@
    You can find them in Supabase → Project Settings → API.
 */
 
-const SUPABASE_URL = "https://eyldrucxywovksqasuqy.supabase.co";   // ← paste your project URL
-const SUPABASE_ANON_KEY = "sb_publishable_lffx2AKe8mEP0WhQLaQ8Aw_mFueAnDr";                 // ← paste your anon/public key
-
+const SUPABASE_URL = "https://eyldrucxywovksqasuqy.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_lffx2AKe8mEP0WhQLaQ8Aw_mFueAnDr";
 // ─── Static lookup tables (these never change) ───────────────────────────────
 
 const IUCN = {

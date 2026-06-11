@@ -100,4 +100,14 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+// Mount only after Supabase data is ready — fixes the race condition
+// where app.jsx renders before data.js finishes its async fetch
+function _mount() {
+  ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+}
+
+if (window.GARCINIA) {
+  _mount();                                           // data already loaded
+} else {
+  window.addEventListener("garcinia:ready", _mount, { once: true });
+}
